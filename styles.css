@@ -32,9 +32,24 @@ body {
 }
 
 .btn {
+  background-color: #0f52ba;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 1rem;
   margin-top: 1rem;
-  padding: 5px 20px;
+  padding: 10px 20px;
+  width: 20rem;
 }
+
+.delete-btn {
+  background-color: #ee4b2b;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+}
+
 .event-container {
   margin-top: 2rem;
   display: grid;
@@ -46,6 +61,8 @@ body {
   border-radius: 10px;
   margin: 10px;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .event-list {

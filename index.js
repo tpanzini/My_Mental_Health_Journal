@@ -47,6 +47,11 @@ function handleEvents(e) {
   });
 
   eventContainer.appendChild(newEvent);
+  const deleteButton = document.createElement("button");
+  deleteButton.innerHTML = "Delete";
+  deleteButton.classList.add("delete-btn");
+  newEvent.appendChild(deleteButton);
+
   inputForm.reset();
 }
 
