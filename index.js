@@ -1,9 +1,11 @@
+//Variables
 const inputForm = document.querySelector(".add-note");
 const inputBar = document.querySelectorAll(".input-bar");
 
 const btn = document.querySelector(".btn");
 const eventContainer = document.querySelector(".event-container");
 
+//Add events
 function handleEvents(e) {
   e.preventDefault();
 
@@ -55,8 +57,22 @@ function handleEvents(e) {
   inputForm.reset();
 }
 
-btn.addEventListener("click", handleEvents);
+//Delete events
+function deleteEvent(e) {
+  if (e.target.classList.contains("delete-btn")){
+      console.log(e);
+  const newEventEl = e.target.parentElement;
+  newEventEl.remove();
+  } else {
+    return;
+  }
+}
 
+//Event listeners
+btn.addEventListener("click", handleEvents);
+eventContainer.addEventListener("click", deleteEvent);
+
+//Working on local storage portion
 function storedData() {
   localStorage.setItem("journalEntry", newEvent);
   const storedInput = localStorage.getItem("journalEntry");
